@@ -43,11 +43,11 @@ class NewPost extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->greeting('Hello Admin ')
-                    ->subject('New Post was Added ')
-                   // ->line('New Post by '.$this->post->user->name.'Need to approve')
-                   // ->line('Post Title '.$this->post->title)
-                    //->action('view', url(route('admin.posts',$this->post->id)))
+                    ->greeting('Hallo Admin ')
+                    ->subject('Neuer Post ')
+                    ->line('Neuer Post von '.$this->post->user->name.'Need to approve')
+                    ->line('Post Title '.$this->post->title)
+                    ->action('view', url(route('admin.posts',$this->post->id)))
                     ->line('Thank you for using our application!');
     }
 
