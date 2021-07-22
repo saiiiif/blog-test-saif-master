@@ -25,8 +25,9 @@ class PostController extends Controller
     {
         $categories = Category::pluck('name', 'id')->all();
         $tags = Tag::pluck('name', 'name')->all();
+        $users = User::pluck('name', 'id')->all();
 
-        return view('admin.posts.create', compact('categories', 'tags'));
+        return view('admin.posts.create', compact('categories', 'tags','users'));
     }
 
     public function store(PostRequest $request)
