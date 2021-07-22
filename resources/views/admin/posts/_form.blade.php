@@ -21,6 +21,18 @@
         </span>
     </div>
 </div>
+<div class="form-group{{ $errors->has('user_id') ? ' has-error' : '' }}">
+    {!! Form::label('author', 'Author', ['class' => 'col-md-2 control-label']) !!}
+
+    <div class="col-md-8">
+    {!! Form::select('user_id', $users, null, ['class' => 'form-control', 'required']) !!}
+
+        <span class="help-block">
+            <strong>{{ $errors->first('user_id') }}</strong>
+        </span>
+    </div>
+</div>
+
 
 <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
     {!! Form::label('category_id', 'Category', ['class' => 'col-md-2 control-label']) !!}
