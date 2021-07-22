@@ -30,7 +30,7 @@ class BlogController extends Controller
 
        
         $post = $post->load(['comments.user', 'tags', 'user', 'category']);
-        dd($post);
+        
         return view('frontend.post', compact('post'));
     }
 
